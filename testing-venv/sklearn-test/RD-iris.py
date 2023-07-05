@@ -13,11 +13,14 @@ import joblib
 import os
 
 cwd = os.getcwd()
-iris_file =  os.sep.join([cwd, 'sklearn-test', 'iris', 'iris.data.csv'])
+iris_file =  os.sep.join([cwd, 'testing-venv', 'sklearn-test', 'iris', 'iris.data.csv'])
 print('cwd:', iris_file)
+
+
 
 #Creating Dataset and including the first row by setting no header as input
 dataset = pd.read_csv(iris_file, header = None)
+# dataset = pd.read_csv('testing-venv\sklearn-test\iris\iris.data.csv', header = None)
 #Renaming the columns
 dataset.columns = ['sepal length in cm', 'sepal width in cm','petal length in cm','petal width in cm','species']
 print('Shape of the dataset: ' + str(dataset.shape))
